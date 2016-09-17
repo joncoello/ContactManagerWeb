@@ -68,6 +68,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="gulpfile.js" />
+    <Content Include="karma-test-shim.js" />
+    <Content Include="karma.conf.js" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="styles.css" />
