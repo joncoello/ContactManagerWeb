@@ -95,6 +95,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.contactListComponent.spec.ts" />
+    <TypeScriptCompile Include="app\app.contactListComponent.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\main.ts" />
   </ItemGroup>
