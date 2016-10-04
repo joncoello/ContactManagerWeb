@@ -2,14 +2,14 @@
 
 @Component({
     selector: 'contact-list',
-    template: 'Contact List'
+    template: '<h1>{{title}}</h1>'
 })
 export class ContactListComponent {
 
     title: string;
 
     constructor() {
-        this.title = 'title';
+        this.title = 'Contact List';
     }
 
 }
