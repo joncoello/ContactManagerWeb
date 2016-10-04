@@ -2,10 +2,6 @@
   "Framework": "jasmine",
   "TestHarnessReferenceMode": "AMD",
   "TestHarnessLocationMode": "SettingsFileAdjacent",
-  "EnableTestFileBatching": true,
-  "BrowserArguments": {
-    "chrome": "--allow-file-access-from-files"
-  },
   "Tests": [
     {
       "Includes": [ "*.spec.ts" ],
