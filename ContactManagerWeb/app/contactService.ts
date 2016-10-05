@@ -1,9 +1,10 @@
-﻿class Contact {
+﻿export class Contact {
     constructor(public name: string) {
     }
 }
 
 export interface IContactService {
+    title: string;
     GetContacts() : Contact[];
 }
 

@@ -1,6 +1,6 @@
 ﻿import { Component } from '@angular/core';
 
-import { contactService } from './contactService';
+import { contactService, IContactService } from './contactService';
 
 @Component({
     selector: 'contact-list',
@@ -8,16 +8,15 @@ import { contactService } from './contactService';
     <h1>{{title}}</h1>
     <h2>{{serviceTitle}}</h2>
     `,
-    providers: [
-        { provide: contactService, useClass: contactService }
-        ]
+    providers: [ contactService ]
 })
+
 export class ContactListComponent {
 
     title: string;
     serviceTitle: string;
 
-    constructor(public contactService: contactService) {
+    constructor(public contactService: IContactService) {
         this.title = 'Contact List';
         this.serviceTitle = contactService.title;
     }

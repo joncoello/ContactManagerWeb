@@ -3,7 +3,7 @@ import { ReflectiveInjector } from '@angular/core';
 
 import { ContactListComponent } from './app.contactListComponent';
 
-import { IContactService, contactService } from './contactService';
+import { IContactService, contactService, Contact } from './contactService';
 
 ////////  SPECS  /////////////
 describe('ContactListComponent', function () {
@@ -11,15 +11,13 @@ describe('ContactListComponent', function () {
     var injector: ReflectiveInjector;
 
     beforeAll(()=> {
-        injector = ReflectiveInjector.resolveAndCreate([
-            { provide: contactService, useClass: contactService}
-        ]);
+        injector = ReflectiveInjector.resolveAndCreate([mockService]);
     });
 
     var sut: ContactListComponent;
 
     beforeEach(() => {
-        sut = new ContactListComponent(injector.get(contactService));
+        sut = new ContactListComponent(injector.get(mockService));
     });
 
     it('should create', () => {
@@ -33,6 +31,17 @@ describe('ContactListComponent', function () {
     it('should start with the correct service title', () => {
         expect(sut.serviceTitle).toEqual('Hello Service');
     });
-
-
+    
 });
+
+class mockService implements IContactService{
+    title: string;
+    constructor() {
+        this.title = 'Hello Service';
+    }
+    GetContacts(): Contact[] {
+        return [
+            new Contact('Jon Smith')
+        ];
+    }
+}
