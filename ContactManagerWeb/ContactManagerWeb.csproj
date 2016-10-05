@@ -98,6 +98,7 @@
     <TypeScriptCompile Include="app\app.contactListComponent.spec.ts" />
     <TypeScriptCompile Include="app\app.contactListComponent.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\contactService.ts" />
     <TypeScriptCompile Include="app\main.ts" />
   </ItemGroup>
   <ItemGroup>
